@@ -1,8 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { browserHistory } from 'react-router';
 
-import App from './App'
-import registerServiceWorker from './registerServiceWorker'
+import Routes from './routes';
+import registerServiceWorker from './utils/registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'))
-registerServiceWorker()
+ReactDOM.render(
+  <Routes history={browserHistory} />,
+  document.getElementById('root')
+);
+
+registerServiceWorker();
